@@ -14,6 +14,8 @@
 		1384390B2887191F003C68EE /* GetItTogetherApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 138439092887191F003C68EE /* GetItTogetherApp.xcdatamodeld */; };
 		1384390D28871921003C68EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1384390C28871921003C68EE /* Assets.xcassets */; };
 		1384391028871921003C68EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1384390E28871921003C68EE /* LaunchScreen.storyboard */; };
+		896095142889A25700C3AB88 /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896095132889A25700C3AB88 /* CalenderCell.swift */; };
+		896095162889D63800C3AB88 /* CalenderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896095152889D63800C3AB88 /* CalenderHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1384390C28871921003C68EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1384390F28871921003C68EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1384391128871921003C68EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		896095132889A25700C3AB88 /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
+		896095152889D63800C3AB88 /* CalenderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				138439002887191F003C68EE /* AppDelegate.swift */,
 				138439022887191F003C68EE /* SceneDelegate.swift */,
 				138439042887191F003C68EE /* ViewController.swift */,
+				896095152889D63800C3AB88 /* CalenderHelper.swift */,
 				138439062887191F003C68EE /* Main.storyboard */,
+				896095132889A25700C3AB88 /* CalenderCell.swift */,
 				1384390C28871921003C68EE /* Assets.xcassets */,
 				1384390E28871921003C68EE /* LaunchScreen.storyboard */,
 				1384391128871921003C68EE /* Info.plist */,
@@ -144,7 +150,9 @@
 				138439052887191F003C68EE /* ViewController.swift in Sources */,
 				1384390B2887191F003C68EE /* GetItTogetherApp.xcdatamodeld in Sources */,
 				138439012887191F003C68EE /* AppDelegate.swift in Sources */,
+				896095162889D63800C3AB88 /* CalenderHelper.swift in Sources */,
 				138439032887191F003C68EE /* SceneDelegate.swift in Sources */,
+				896095142889A25700C3AB88 /* CalenderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
