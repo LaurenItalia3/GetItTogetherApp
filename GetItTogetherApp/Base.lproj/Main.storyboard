@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Monthly Calendar-->
         <scene sceneID="h6K-ix-HKt">
             <objects>
                 <viewController id="4Mr-NS-DE9" customClass="ViewController" customModule="GetItTogetherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,26 +158,22 @@
                                 <exclude reference="Jqo-Br-d1x"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outlet property="collectionView" destination="f81-nw-hx7" id="qKj-Oo-OUH"/>
-                            <outletCollection property="collection" destination="f81-nw-hx7" collectionClass="NSMutableArray" id="ewk-ao-f40"/>
-                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="cUj-3A-biD">
+                    <navigationItem key="navigationItem" title="Monthly Calendar" id="cUj-3A-biD">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ZF1-Ie-Um9">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="hIG-kF-Jgy">
                                 <rect key="frame" x="314.5" y="5" width="79.5" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Weekly"/>
+                                <connections>
+                                    <segue destination="tQa-cH-aqC" kind="show" id="bVM-0j-yeH"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="tQa-cH-aqC" kind="show" id="QKj-3I-pKx"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="f81-nw-hx7" id="z0n-UI-geR"/>
+                        <outlet property="collectionView" destination="f81-nw-hx7" id="ekg-7H-asT"/>
                         <outlet property="monthLabel" destination="87b-mS-JLl" id="85X-wh-ly1"/>
                     </connections>
                 </viewController>
@@ -201,7 +197,7 @@
             </objects>
             <point key="canvasLocation" x="-110" y="82"/>
         </scene>
-        <!--Weekly View Controller-->
+        <!--Weekly Calendar-->
         <scene sceneID="loX-E9-wHe">
             <objects>
                 <viewController id="tQa-cH-aqC" customClass="WeeklyViewController" customModule="GetItTogetherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -276,7 +272,7 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fm7-qK-681">
-                                <rect key="frame" x="0.0" y="244.5" width="414" height="617.5"/>
+                                <rect key="frame" x="0.0" y="244.5" width="414" height="87"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="SWd-Sg-jKo">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -319,6 +315,32 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NCY-ny-JGZ">
+                                <rect key="frame" x="0.0" y="360" width="414" height="502"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EDC-tc-ycl">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EDC-tc-ycl" id="ovL-Xe-u8Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnt-54-piR">
+                                                    <rect key="frame" x="20" y="11.5" width="43" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Jnt-54-piR" firstAttribute="centerY" secondItem="ovL-Xe-u8Z" secondAttribute="centerY" id="4SL-iG-Mrx"/>
+                                                <constraint firstItem="Jnt-54-piR" firstAttribute="leading" secondItem="ovL-Xe-u8Z" secondAttribute="leading" constant="20" symbolic="YES" id="OO2-dt-hNr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ysJ-KB-Vfo"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -328,20 +350,24 @@
                             <constraint firstItem="q8Q-Rp-M2j" firstAttribute="width" secondItem="22c-53-mBS" secondAttribute="height" multiplier="174:31" id="9Gl-On-s5j"/>
                             <constraint firstItem="Hfn-wx-xVg" firstAttribute="centerY" secondItem="22c-53-mBS" secondAttribute="centerY" id="AJB-tf-eMb"/>
                             <constraint firstItem="ysJ-KB-Vfo" firstAttribute="trailing" secondItem="9K2-AL-0Zq" secondAttribute="trailing" id="CAg-lY-HzZ"/>
-                            <constraint firstItem="ysJ-KB-Vfo" firstAttribute="bottom" secondItem="fm7-qK-681" secondAttribute="bottom" id="FNt-9L-mV3"/>
                             <constraint firstItem="9K2-AL-0Zq" firstAttribute="top" secondItem="22c-53-mBS" secondAttribute="bottom" constant="30" id="GjU-gS-QKp"/>
+                            <constraint firstItem="NCY-ny-JGZ" firstAttribute="height" secondItem="fm7-qK-681" secondAttribute="height" multiplier="6" id="MBD-EH-0J2"/>
+                            <constraint firstItem="NCY-ny-JGZ" firstAttribute="top" secondItem="fm7-qK-681" secondAttribute="bottom" constant="10" id="OOl-r1-b7x"/>
                             <constraint firstItem="ysJ-KB-Vfo" firstAttribute="trailing" secondItem="fm7-qK-681" secondAttribute="trailing" id="R3S-KL-mnW"/>
                             <constraint firstItem="q8Q-Rp-M2j" firstAttribute="centerY" secondItem="22c-53-mBS" secondAttribute="centerY" id="SBc-Ml-nlH"/>
                             <constraint firstItem="Hfn-wx-xVg" firstAttribute="leading" secondItem="ysJ-KB-Vfo" secondAttribute="leading" id="ThB-SH-LzF"/>
                             <constraint firstItem="fm7-qK-681" firstAttribute="top" secondItem="9K2-AL-0Zq" secondAttribute="bottom" id="Ul1-sL-HdF"/>
                             <constraint firstItem="q8Q-Rp-M2j" firstAttribute="width" secondItem="22c-53-mBS" secondAttribute="height" multiplier="174:31" id="W2l-7R-jYo"/>
                             <constraint firstItem="fm7-qK-681" firstAttribute="leading" secondItem="ysJ-KB-Vfo" secondAttribute="leading" id="YN5-hg-fuj"/>
+                            <constraint firstItem="NCY-ny-JGZ" firstAttribute="leading" secondItem="ysJ-KB-Vfo" secondAttribute="leading" id="eT5-Wn-eVM"/>
                             <constraint firstItem="Hfn-wx-xVg" firstAttribute="height" secondItem="22c-53-mBS" secondAttribute="height" id="gxS-lU-9sB"/>
                             <constraint firstItem="22c-53-mBS" firstAttribute="centerX" secondItem="ysJ-KB-Vfo" secondAttribute="centerX" id="jbX-e5-Pnb"/>
                             <constraint firstItem="9K2-AL-0Zq" firstAttribute="leading" secondItem="ysJ-KB-Vfo" secondAttribute="leading" id="lWE-xe-xeN"/>
                             <constraint firstItem="ysJ-KB-Vfo" firstAttribute="trailing" secondItem="q8Q-Rp-M2j" secondAttribute="trailing" id="pNZ-HE-HBG"/>
                             <constraint firstItem="9K2-AL-0Zq" firstAttribute="centerX" secondItem="ysJ-KB-Vfo" secondAttribute="centerX" id="rhA-tC-p8R"/>
                             <constraint firstItem="22c-53-mBS" firstAttribute="top" secondItem="ysJ-KB-Vfo" secondAttribute="top" constant="45" id="tYu-sP-SAm"/>
+                            <constraint firstItem="ysJ-KB-Vfo" firstAttribute="bottom" secondItem="NCY-ny-JGZ" secondAttribute="bottom" id="uot-1H-XO1"/>
+                            <constraint firstItem="ysJ-KB-Vfo" firstAttribute="trailing" secondItem="NCY-ny-JGZ" secondAttribute="trailing" id="vLm-Xx-lc9"/>
                             <constraint firstItem="q8Q-Rp-M2j" firstAttribute="leading" secondItem="22c-53-mBS" secondAttribute="trailing" id="zDy-Te-fiI"/>
                         </constraints>
                         <variation key="default">
@@ -351,14 +377,11 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="PYW-5g-LXS">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Jlg-5t-T98">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="i35-27-ZbG">
-                                <rect key="frame" x="314.5" y="5" width="79.5" height="34.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Weekly"/>
-                            </button>
+                    <navigationItem key="navigationItem" title="Weekly Calendar" id="PYW-5g-LXS">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="a0d-D4-dyg">
+                            <connections>
+                                <segue destination="PVq-5S-az8" kind="show" id="64U-TN-aOH"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -368,12 +391,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9As-GQ-OpU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="82"/>
+            <point key="canvasLocation" x="1442.0289855072465" y="81.696428571428569"/>
+        </scene>
+        <!--Event Edit-->
+        <scene sceneID="GSO-9v-LID">
+            <objects>
+                <viewController id="PVq-5S-az8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="57n-bZ-v2z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jwz-rw-jLV">
+                                <rect key="frame" x="0.0" y="264" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oL9-lq-x4t">
+                                <rect key="frame" x="62" y="134" width="290" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d77-wm-KsT"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="oL9-lq-x4t" firstAttribute="centerX" secondItem="d77-wm-KsT" secondAttribute="centerX" id="4rG-64-f15"/>
+                            <constraint firstItem="oL9-lq-x4t" firstAttribute="width" secondItem="57n-bZ-v2z" secondAttribute="width" multiplier="0.7" id="FmL-lO-HHR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Event Edit" id="i4f-md-Bxr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biT-em-8qV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2246" y="82"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
