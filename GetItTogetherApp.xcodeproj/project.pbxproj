@@ -17,6 +17,7 @@
 		896095142889A25700C3AB88 /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896095132889A25700C3AB88 /* CalenderCell.swift */; };
 		896095162889D63800C3AB88 /* CalenderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896095152889D63800C3AB88 /* CalenderHelper.swift */; };
 		89609518288A0FFF00C3AB88 /* getITTogether.2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89609517288A0FFF00C3AB88 /* getITTogether.2.swift */; };
+		89BD2DD5288A21B10034B1DD /* WeeklyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BD2DD4288A21B10034B1DD /* WeeklyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		896095132889A25700C3AB88 /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
 		896095152889D63800C3AB88 /* CalenderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderHelper.swift; sourceTree = "<group>"; };
 		89609517288A0FFF00C3AB88 /* getITTogether.2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getITTogether.2.swift; sourceTree = "<group>"; };
+		89BD2DD4288A21B10034B1DD /* WeeklyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				138439042887191F003C68EE /* ViewController.swift */,
 				896095152889D63800C3AB88 /* CalenderHelper.swift */,
 				138439062887191F003C68EE /* Main.storyboard */,
+				89BD2DD4288A21B10034B1DD /* WeeklyViewController.swift */,
 				89609517288A0FFF00C3AB88 /* getITTogether.2.swift */,
 				896095132889A25700C3AB88 /* CalenderCell.swift */,
 				1384390C28871921003C68EE /* Assets.xcassets */,
@@ -155,6 +158,7 @@
 				138439012887191F003C68EE /* AppDelegate.swift in Sources */,
 				896095162889D63800C3AB88 /* CalenderHelper.swift in Sources */,
 				138439032887191F003C68EE /* SceneDelegate.swift in Sources */,
+				89BD2DD5288A21B10034B1DD /* WeeklyViewController.swift in Sources */,
 				896095142889A25700C3AB88 /* CalenderCell.swift in Sources */,
 				89609518288A0FFF00C3AB88 /* getITTogether.2.swift in Sources */,
 			);
